@@ -1,7 +1,3 @@
-Creating a simple neural network in Python requires defining the structure of the network, including the inputs, weights, and activation functions. Here's an example of a simple neural network with a single layer, basic forward propagation, and manual weight initialization:
-
-# Python Code: Simple Neural Network with Weights and Inputs
-```
 import numpy as np
 
 # Sigmoid activation function
@@ -80,27 +76,3 @@ if __name__ == "__main__":
     # Test the neural network
     print("Final output after training:")
     print(nn.forward(X))
-
-```
-# Explanation:
-* **sigmoid():** This is the activation function used for both the hidden and output layers.
-
-* **sigmoid_derivative():** This function calculates the derivative of the sigmoid function, which is required for the backpropagation step.
-
-* **NeuralNetwork class:**
-
-* The class defines a simple neural network with one hidden layer and an output layer.
-
-* It contains methods for forward propagation (forward), backpropagation (backward), and training the network (train).
-
-* The weights and biases are initialized randomly.
-
-* During training, the network performs forward and backward passes for each epoch, adjusting the weights based on the errors computed by backpropagation.
-
-# Training Process:
-* Weights are adjusted during each backward pass based on the error between the predicted output (self.final_output) and the true output (y).
-
-* The network is trained for 10,000 epochs with a learning rate of 0.1. The loss (mean squared error) is printed every 1000 epochs.
-
-# Expected Output:
-This neural network will attempt to learn the XOR function, where the inputs are 3 features and the output is a binary class (0 or 1). The output will improve as training progresses.
